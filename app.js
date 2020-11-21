@@ -1,10 +1,10 @@
 // const createError = require('http-errors');
 const express = require('express');
+const config =require('config');
 // const path = require('path');
 // const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const helmet = require('helmet');
-
 // const indexRouter = require('./routes/index');
 // const usersRouter = require('./routes/users');
 
@@ -24,6 +24,7 @@ const app = express();
 app.use(express.json());
 app.use(helmet())
 if (app.get(`env`)==='development'){
+    console.log(config.get('name'))
     app.use(logger('dev'));
 }
 // app.set('views', path.join(__dirname, 'views'));
