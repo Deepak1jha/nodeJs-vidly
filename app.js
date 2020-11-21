@@ -1,13 +1,16 @@
 // const createError = require('http-errors');
 const express = require('express');
 const config =require('config');
+const debug = require('debug');
 // const path = require('path');
 // const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const helmet = require('helmet');
 // const indexRouter = require('./routes/index');
 // const usersRouter = require('./routes/users');
-
+debug('booting %o', "name");
+debug('booting %o', "name");
+debug('booting %o', "name");
 /*
  view engine setup
 */
@@ -22,9 +25,10 @@ const books = [
 // app.set('view engine', 'pug');
 const app = express();
 app.use(express.json());
-app.use(helmet())
-if (app.get(`env`)==='development'){
-    console.log(config.get('name'))
+app.use(helmet());
+
+if (app.get(`env`)===`development`){
+    console.log(config.get('name'));
     app.use(logger('dev'));
 }
 // app.set('views', path.join(__dirname, 'views'));
