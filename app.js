@@ -7,20 +7,38 @@ const logger = require('morgan');
 // const indexRouter = require('./routes/index');
 // const usersRouter = require('./routes/users');
 
-const app = express();
-
 /*
  view engine setup
 */
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'pug');
 
+const books = [
+    {id: "1", name: "book name 1"},
+    {id: "2", name: "book name 2"},
+    {id: "3", name: "book name 3"},
+    {id: "4", name: "book name 4"},
+    {id: "5", name: "book name 5"},
+]
+// app.set('view engine', 'pug');
+const app = express();
+app.use(express.json());
+
+// app.set('views', path.join(__dirname, 'views'));
 app.use(logger('dev'));
 
-app.get('/',(req,res) =>{
-  res.send("Hello")
-} )
-// app.use(express.json());
+app.get('/books/:id', (req, res) => {
+    console.log(req.params)
+    const book = books.find(item => item.id === req.params.id);
+    if (!book){
+        res.status(404).send("Cant find any book with this id");
+    }
+    res.send(book)
+})
+
+app.post('/books',((req, res) => {
+    console.log("--------------")
+    console.log(req.body.book)
+    res.send("POST METHOD")
+}))
 // app.use(express.urlencoded({ extended: false }));
 // app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
@@ -45,6 +63,7 @@ app.get('/',(req,res) =>{
 // });
 
 // module.exports = app;
-app.listen(5000,()=>{
-  console.log("0000000000000")
+const port = process.env.PORT || 5000
+app.listen(port, () => {
+    console.log(`Listing to this port => ${port}`)
 })
