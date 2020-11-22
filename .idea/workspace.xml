@@ -10,11 +10,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0068f31b-723d-4397-be0a-ecab26ed3e23" name="Default Changelist" comment="Lodash and bcrypt added for password">
-      <change afterPath="$PROJECT_DIR$/routes/user/userRoute.js" afterDir="false" />
+    <list default="true" id="0068f31b-723d-4397-be0a-ecab26ed3e23" name="Default Changelist" comment="Authentication in implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.yarn-integrity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ms/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ms/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ms/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ms/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ms/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ms/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nodemon/node_modules/ms/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nodemon/node_modules/ms/license.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nodemon/node_modules/ms/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nodemon/node_modules/ms/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/safe-buffer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/safe-buffer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/safe-buffer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/safe-buffer/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/auth/authRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth/authRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +71,7 @@
       <updated>1605970213718</updated>
       <workItem from="1605970214879" duration="1846000" />
       <workItem from="1605972067199" duration="9588000" />
-      <workItem from="1606022742204" duration="10892000" />
+      <workItem from="1606022742204" duration="11784000" />
     </task>
     <task id="LOCAL-00001" summary="Post method and express Json middleware added">
       <created>1605975342167</created>
@@ -133,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606042913262</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Authentication in implemented">
+      <created>1606043578427</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1606043578427</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +179,8 @@
     <MESSAGE value="Added enums validators" />
     <MESSAGE value="Reference type relationship created between documents" />
     <MESSAGE value="Lodash and bcrypt added for password" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lodash and bcrypt added for password" />
+    <MESSAGE value="Authentication in implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Authentication in implemented" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1892" height="262" key="GridCell.Tab.0.bottom" timestamp="1605972061523">
