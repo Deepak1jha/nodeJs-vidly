@@ -89,7 +89,7 @@ if (app.get(`env`) === `development`) {
     console.log(config.get('name'));
     app.use(logger('dev'));
 }
-const port = process.env.PORT || 2020
+const port = process.env.PORT || 2021
 app.listen(port, () => {
     console.log(`Listing to this port => ${port}`)
 })
