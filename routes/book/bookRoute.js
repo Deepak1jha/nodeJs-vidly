@@ -8,25 +8,22 @@ const books = [
     {id: "4", name: "book name 4"},
     {id: "5", name: "book name 5"},
 ]
+const asyncMiddleware = require('../../middleware/asyncMiddleware/asyncMiddleware');
 
-router.get('/:id', auth, async (req, res, next) => {
-    try {
-        const book = await books.find(item => item.id === req.params.id);
-        if (!book) {
-            res.status(404).send("Cant find any book with this id");
-        }
+router.get('/:id', auth, asyncMiddleware(async (req, res) => {
+    const book = await books.find(item => item.id === req.params.id);
+    if (!book) {
+        res.status(404).send("Cant find any book with this id");
         res.send(book);
-    } catch (e) {
-        next(e);
     }
-});
-
-router.get('/', (req, res) => {
-    res.send(books)
-});
-
-router.post('/', ((req, res) => {
-    res.send("POST METHOD")
 }));
+
+router.get('/', auth, asyncMiddleware((req, res) => {
+    res.send(books)
+}));
+
+router.post('/', auth, asyncMiddleware((async (req, res) => {
+    res.send("POST METHOD")
+})));
 
 module.exports = router;
