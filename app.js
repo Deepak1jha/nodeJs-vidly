@@ -3,6 +3,7 @@ const config = require('config');
 const logger = require('morgan');
 const helmet = require('helmet');
 const mongoose = require('mongoose');
+const error = require('../vidly/middleware/error/error');
 
 const bookRouter = require('./routes/book/bookRoute');
 const authRouter = require('./routes/auth/authRoute');
@@ -13,6 +14,7 @@ app.use(helmet());
 app.use('/api/books', bookRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/user', userRouter);
+app.use(error);
 
 mongoose.connect('mongodb://localhost/vidly')
     .then(() => console.log("Connected to mongoDb database"))
@@ -89,7 +91,7 @@ if (app.get(`env`) === `development`) {
     console.log(config.get('name'));
     app.use(logger('dev'));
 }
-const port = process.env.PORT || 2022
+const port = process.env.PORT || 2028
 app.listen(port, () => {
     console.log(`Listing to this port => ${port}`)
 })

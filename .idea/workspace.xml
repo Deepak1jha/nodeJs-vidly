@@ -10,11 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0068f31b-723d-4397-be0a-ecab26ed3e23" name="Default Changelist" comment="Router secure">
+    <list default="true" id="0068f31b-723d-4397-be0a-ecab26ed3e23" name="Default Changelist" comment="Current logged in user api implemented">
+      <change afterPath="$PROJECT_DIR$/middleware/error/error.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/auth/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/user/userRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user/userRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/book/bookRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/book/bookRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +61,7 @@
       <updated>1605970213718</updated>
       <workItem from="1605970214879" duration="1846000" />
       <workItem from="1605972067199" duration="9588000" />
-      <workItem from="1606022742204" duration="14620000" />
+      <workItem from="1606022742204" duration="15808000" />
     </task>
     <task id="LOCAL-00001" summary="Post method and express Json middleware added">
       <created>1605975342167</created>
@@ -161,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606059102587</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Current logged in user api implemented">
+      <created>1606059876644</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1606059876644</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,7 +201,8 @@
     <MESSAGE value="Jwt token added" />
     <MESSAGE value="Auth middleware implemented" />
     <MESSAGE value="Router secure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Router secure" />
+    <MESSAGE value="Current logged in user api implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Current logged in user api implemented" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1892" height="262" key="GridCell.Tab.0.bottom" timestamp="1605972061523">

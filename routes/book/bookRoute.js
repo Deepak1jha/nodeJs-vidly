@@ -9,12 +9,16 @@ const books = [
     {id: "5", name: "book name 5"},
 ]
 
-router.get('/:id', auth, (req, res) => {
-    const book = books.find(item => item.id === req.params.id);
-    if (!book) {
-        res.status(404).send("Cant find any book with this id");
+router.get('/:id', auth, async (req, res, next) => {
+    try {
+        const book = await books.find(item => item.id === req.params.id);
+        if (!book) {
+            res.status(404).send("Cant find any book with this id");
+        }
+        res.send(book);
+    } catch (e) {
+        next(e);
     }
-    res.send(book)
 });
 
 router.get('/', (req, res) => {
