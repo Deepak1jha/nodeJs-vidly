@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const auth = require('../../middleware/auth/auth');
 const books = [
     {id: "1", name: "book name 1"},
     {id: "2", name: "book name 2"},
@@ -8,7 +9,7 @@ const books = [
     {id: "5", name: "book name 5"},
 ]
 
-router.get('/:id', (req, res) => {
+router.get('/:id', auth, (req, res) => {
     const book = books.find(item => item.id === req.params.id);
     if (!book) {
         res.status(404).send("Cant find any book with this id");
