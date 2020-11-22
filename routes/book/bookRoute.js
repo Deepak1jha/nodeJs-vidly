@@ -9,7 +9,6 @@ const books = [
 ]
 
 router.get('/:id', (req, res) => {
-    console.log(req.params)
     const book = books.find(item => item.id === req.params.id);
     if (!book) {
         res.status(404).send("Cant find any book with this id");
@@ -22,8 +21,6 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', ((req, res) => {
-    console.log("--------------")
-    console.log(req.body.book)
     res.send("POST METHOD")
 }));
 

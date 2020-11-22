@@ -4,11 +4,13 @@ const logger = require('morgan');
 const helmet = require('helmet');
 const mongoose = require('mongoose');
 
-const bookRouter = require('./routes/book/bookRoute')
+const bookRouter = require('./routes/book/bookRoute');
+const authRouter = require('./routes/auth/authRoute');
 const app = express();
 app.use(express.json());
 app.use(helmet());
 app.use('/api/books', bookRouter);
+app.use('/api',authRouter);
 
 mongoose.connect('mongodb://localhost/vidly')
     .then(() => console.log("Connected to mongoDb database"))
@@ -16,18 +18,19 @@ mongoose.connect('mongodb://localhost/vidly')
         console.error("cant connect to mongoDB", error);
     });
 
-const Author = mongoose.model('Author', new mongoose.Schema({
+const authorSchema = new mongoose.Schema({
     name: String,
     bio: String,
     website: String
-}));
-const Course = mongoose.model('course', new mongoose.Schema({
+});
+
+const Author = mongoose.model('Author', authorSchema);
+
+const courseSchema = new mongoose.Schema({
     name: String,
-    author:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:Author
-    }
-}));
+    author: authorSchema
+});
+const Course = mongoose.model('course', courseSchema);
 
 // const courseSchema = new mongoose.Schema({
 //     name: String,
@@ -74,8 +77,8 @@ const courseObj = new Course({
 try {
     // courseObj.save().then(res => console.log(res));
     // createAuthor('deepak','student',"deepak1jha.github.io");
-    // createCourse("Java","5fba25aa803ce167451c7d42");
-    getCourseList();
+    // createCourse("Java emb",new Author({name:"Deepaak"}));
+    // getCourseList();
 } catch (ex) {
     console.log(ex)
 }
@@ -84,7 +87,7 @@ if (app.get(`env`) === `development`) {
     console.log(config.get('name'));
     app.use(logger('dev'));
 }
-const port = process.env.PORT || 2072
+const port = process.env.PORT || 2020
 app.listen(port, () => {
     console.log(`Listing to this port => ${port}`)
 })
