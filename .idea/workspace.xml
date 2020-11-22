@@ -10,7 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0068f31b-723d-4397-be0a-ecab26ed3e23" name="Default Changelist" comment="MongoDb connection created">
+    <list default="true" id="0068f31b-723d-4397-be0a-ecab26ed3e23" name="Default Changelist" comment="Course schema ic created">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
     </list>
@@ -59,7 +59,7 @@
       <updated>1605970213718</updated>
       <workItem from="1605970214879" duration="1846000" />
       <workItem from="1605972067199" duration="9588000" />
-      <workItem from="1606022742204" duration="755000" />
+      <workItem from="1606022742204" duration="2251000" />
     </task>
     <task id="LOCAL-00001" summary="Post method and express Json middleware added">
       <created>1605975342167</created>
@@ -103,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605982366469</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Course schema ic created">
+      <created>1606023694103</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1606023694103</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,7 +135,8 @@
     <MESSAGE value="Debuuger added" />
     <MESSAGE value="Router added" />
     <MESSAGE value="MongoDb connection created" />
-    <option name="LAST_COMMIT_MESSAGE" value="MongoDb connection created" />
+    <MESSAGE value="Course schema ic created" />
+    <option name="LAST_COMMIT_MESSAGE" value="Course schema ic created" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1892" height="262" key="GridCell.Tab.0.bottom" timestamp="1605972061523">
