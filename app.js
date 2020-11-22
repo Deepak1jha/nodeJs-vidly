@@ -6,11 +6,13 @@ const mongoose = require('mongoose');
 
 const bookRouter = require('./routes/book/bookRoute');
 const authRouter = require('./routes/auth/authRoute');
+const userRouter = require('./routes/user/userRoute');
 const app = express();
 app.use(express.json());
 app.use(helmet());
 app.use('/api/books', bookRouter);
-app.use('/api',authRouter);
+app.use('/api/auth', authRouter);
+app.use('/api/user', userRouter);
 
 mongoose.connect('mongodb://localhost/vidly')
     .then(() => console.log("Connected to mongoDb database"))
